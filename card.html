@@ -1,0 +1,184 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>IAC - Infraestrutura Como Codigo</title>
+  <link rel="stylesheet" media="all" href="estilo.css">
+</head>
+
+<body>
+  <section class="cards">
+    <article class="card">
+      <picture class="thumbnail">
+        <img class="category__03" src="Res_Amazon-VPC_NAT-Gateway_48_Light.svg" alt="" />
+      </picture>
+      <div class="card-content">
+        <p class="category category__03">Amazon Virtual Private Cloud</p>
+        <h2>NAT gateways</h2>
+        <p>Para esse teste, foi baixado, via CURL, o logo do site do Serpro para a pasta do EFS, conforme imagem abaixo:
+        </p>
+        <a href="https://serpro.gov.br/"><img src="logo-serpro.png" alt=""></a>
+      </div><!-- .card-content -->
+      <footer>
+        <div class="post-meta">
+          <span class="timestamp"><i class="fa fa-clock-o"></i> Detalhes:</span>
+          <span class="comments"><i class="fa fa-comments"></i><a
+              href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html"> NAT gateways</a></span>
+        </div>
+      </footer>
+    </article>
+
+    <article class="card">
+      <picture class="thumbnail">
+        <img class="category__01" src="Res_Amazon-Elastic-File-System_File-System_48_Light.svg" alt="" />
+      </picture>
+      <div class="card-content">
+        <p class="category category__01">File System</p>
+        <h2>Amazon EFS</h2>
+        <p>Para esse teste, foi instalado o cliente EFS da AWS no EC2 e montado o EFS, conforme tabela abaixo:</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>FILESYSTEM</th>
+              <th>MOUNT</th>
+            </tr>
+            <tr>
+              <td>fs-0a7c1d07.efs.sa-east-1.amazonaws.com:/ </td>
+              <td>/opt/demo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <footer>
+        <div class="post-meta">
+          <span class="timestamp"><i class="fa fa-clock-o"></i> Detalhes:</span>
+          <span class="comments"><i class="fa fa-comments"></i><a href="https://aws.amazon.com/pt/efs/"> Elastic File
+              System</a></span>
+        </div>
+      </footer>
+    </article>
+
+    <article class="card">
+      <picture class="thumbnail">
+        <img class="category__02" src="Res_Amazon-Aurora_Amazon-RDS-Instance_48_Light.svg" alt="" />
+      </picture>
+      <div class="card-content">
+        <p class="category category__02">Banco Relacional</p>
+        <h2>RDS for MySQL</h2>
+        <p>Para esse teste, foi instalado o cliente do MySql no EC2, criado um banco e realizado um select, conforme
+          tabela abaixo:</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>rds_id</th>
+              <th>testado</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Teste OK</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>RDS Mysql OK</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <footer>
+        <div class="post-meta">
+          <span class="timestamp"><i class="fa fa-clock-o"></i> Detalhes:</span>
+          <span class="comments"><i class="fa fa-comments"></i><a target="_blank"
+              href="https://aws.amazon.com/pt/rds/aurora/"> Amazon Aurora</a></span>
+        </div>
+      </footer>
+    </article>
+
+    <article class="card">
+      <picture class="thumbnail">
+        <img class="category__04" src="Res_Amazon-ElastiCache_ElastiCache-for-Redis_48_Light.svg" alt="" />
+      </picture>
+      <div class="card-content">
+        <p class="category category__04">ElastiCache</p>
+        <h2>ElastiCache for Redis</h2>
+        <p>Para esse teste, foi instalado o cliente do Redis e executado operacoes, conforme tabela abaixo:</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>set foo 100; incr foo; append foo xxx; get foo</th>
+            </tr>
+            <tr>
+              <td>OK</td>
+            </tr>
+            <tr>
+              <td>101</td>
+            </tr>
+            <tr>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>101xxx</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- .card-content -->
+      <footer>
+        <div class="post-meta">
+          <span class="timestamp"><i class="fa fa-clock-o"></i> Detalhes:</span>
+          <span class="comments"><i class="fa fa-comments"></i><a href="https://aws.amazon.com/pt/redis/"> Amazon
+              ElastiCache for Redis</a></span>
+        </div>
+      </footer>
+    </article>
+
+    <article class="card">
+      <picture class="thumbnail">
+        <img class="category__05" src="Res_Amazon-Cloudfront_Functions_48_Light.svg" alt="" />
+      </picture>
+      <div class="card-content">
+        <p class="category category__05">Rede de entrega de conteudo</p>
+        <h2>Amazon CloudFront</h2>
+        <p>Para esse teste, a requisicao ira apontar para o endpoint do CloudFront, conforme link abaixo:</p>
+        <div>
+          <a href="https://d2vdan7gxwqg9r.cloudfront.net">
+            <img src="https://d2vdan7gxwqg9r.cloudfront.net/logo-serpro.png" alt="">
+          </a>
+        </div>
+      </div>
+      <footer>
+        <div class="post-meta">
+          <span class="timestamp"><i class="fa fa-clock-o"></i> Detalhes:</span>
+          <span class="comments"><i class="fa fa-comments"></i><a href="https://aws.amazon.com/pt/cloudfront/"> Amazon
+              CloudFront</a></span>
+        </div>
+      </footer>
+    </article>
+    <article class="card">
+      <picture class="thumbnail">
+        <img class="category__06" src="terraform.svg" alt="" />
+      </picture>
+      <div class="card-content">
+        <p class="category category__06">Terraform</p>
+        <h2>Template Terraform</h2>
+        <p>Para esse teste, foi usado variaveis, loop e interpolacao, conforme HTML abaixo:</p>
+        <p>Hostname: ip-172-31-9-81</p>
+        <h1>PoC Min. Educa...</h1>
+        <ul>
+          <li><b>backend 10.0.0.1:8080</b></li>
+          <li><b>backend 10.0.0.2:8080</b></li>
+        </ul>
+      </div><!-- .card-content -->
+      <footer>
+        <div class="post-meta">
+          <span class="timestamp"><i class="fa fa-clock-o"></i> Detalhes</span>
+          <span class="comments"><i class="fa fa-comments"></i><a
+              href="https://www.terraform.io/docs/language/functions/templatefile.html"> templatefile
+              Function</a></span>
+        </div>
+      </footer>
+    </article>
+  </section>
+</body>
+
+</html>
